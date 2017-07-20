@@ -23,59 +23,13 @@ jQuery(
 			 */
 			var resContent = new Content( 'app/data/content.json' );
 
-			/**
-			 * Populate the header
-			 */
-			var populateHeader = function() {
-				var strHeaderSource = $( '#header-template' ).html(),
-						resHeaderTemplate = Handlebars.compile( strHeaderSource ),
-						strHeaderHTML = resHeaderTemplate( resContent.getItem( 'header' ) );
 
-				$( '#header' ).html( strHeaderHTML );
-			};
+			var populateElement = function(element) {
+				var strSource = $( '#' + element + '-template' ).html(),
+						resTemplate = Handlebars.compile( strSource ),
+						strHTML = resTemplate( resContent.getItem( element ) );
 
-			/**
-			 * Populate the accordion
-			 */
-			var populateAbout = function() {
-				var strAboutSource = $( '#about-template' ).html(),
-						resAboutTemplate = Handlebars.compile( strAboutSource ),
-						strAboutHTML = resAboutTemplate( resContent.getItem( 'about' ) );
-
-				$( '#about' ).html( strAboutHTML );
-			};
-
-			/**
-			 * Populate the tasks
-			 */
-			var populateTasks = function() {
-				var strTaskSource = $( '#task-template' ).html(),
-						resTasksTemplate = Handlebars.compile( strTaskSource ),
-						strTasksHTML = resTasksTemplate( resContent.getItem( 'tasks' ) );
-
-				$( '#tasks' ).append( strTasksHTML );
-			};
-
-			/**
-			 * Populate the content
-			 */
-			var populateContent = function() {
-				var strContentSource = $( '#content-template' ).html(),
-						resContentTemplate = Handlebars.compile( strContentSource ),
-						strContentHTML = resContentTemplate( resContent.getItem( 'content' ) );
-
-				$( '#content' ).append( strContentHTML );
-			};
-
-			/**
-			 * Populate the documentation links
-			 */
-			var populateDocumentation = function() {
-				var strContentSource = $( '#documentation-template' ).html(),
-						resContentTemplate = Handlebars.compile( strContentSource ),
-						strContentHTML = resContentTemplate( resContent.getItem( 'docs' ) );
-
-				$( '#documentation' ).append( strContentHTML );
+				$( '#' + element ).html( strHTML );
 			};
 
 			/**
@@ -102,11 +56,11 @@ jQuery(
 			 */
 			resContent.onReady(
 					function() {
-						populateHeader();
-						populateAbout();
-						populateTasks();
-						populateContent();
-						populateDocumentation();
+						populateElement("header");
+						populateElement("about");
+						populateElement("tasks");
+						populateElement("content");
+						populateElement("documentation");
 					}
 			);
 		}
