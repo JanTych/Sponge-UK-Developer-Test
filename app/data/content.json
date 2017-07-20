@@ -4,6 +4,22 @@
     "subtitle": "May the force be with you",
     "myname": "James Roberts"
   },
+  "about": {
+    "button" : [
+      {
+        "name" : "About me",
+        "content" : "<p>I recently graduated from Plymouth University studying Computing and Games Development with a 2:1. I'm interested in programming in a creative environment and made sure to study a variety of modules from mobile programming to web development to games design.</p>"
+      },
+      {
+        "name" : "Photo",
+        "content" : "<img src=\"./resources/Profile-image.jpg\" height=\"300\" width=\"300\">"
+      },
+      {
+        "name" : "About me",
+        "content" : "<p><a href=\"https://jamesrobertsportfolio.wordpress.com/\">Portfolio</a> - A website containing various projects that I have worked on</p><p><a href=\"https://jantych.itch.io/\">Itch.io Profile</a> - Some browser based games that I have made, mostly for short Game Jams</p>"
+      }
+    ]
+  },
   "content": {
     "title": "HTML",
     "body": "<p style:'font-size:110%'><b>HyperText Markup Language</b>, commonly referred to as “<b>HTML</b>”, is the standard markup language used to create web pages. Along with <a href='https://en.wikipedia.org/wiki/Cascading_Style_Sheets'>CSS</a>, & <a href='https://en.wikipedia.org/wiki/JavaScript'>JavaScript</a>, html is a cornerstone technology, used by most websites to create visually engaging web pages, user interfaces for  web applications, and user interfaces for many mobile  applications.</p><p style:'font-size:110%'>The W3C recommends several conventions to ensure an easy migration between HTML and XHTML (see <a href='http://www.w3.org/TR/xhtml1/#guidelines'>HTML Compatibility Guidelines</a>). The following step can be applied to XHMTL 1.0 documents only:</p><ol style:'font-size:110%'><li>Include <span style='font-family:Calibri;'>both xml:lang and lang attributes</span> on any elements assigning language.</li><li>Use the empty-element syntax only for elements specified as empty in HTML</li><li style='font-family:Comic Sans MS; font-size:90%'>Include an extra space in empty–element tags: for example &lt;br /&gt; instead of &lt;br/&gt;.</li><li>Include explicit close tags for elements that permit content but are left empty (for <span style='font-family:Calibri;'>example, &lt;div&gt;&lt;/div&gt;, not &lt;div /&gt;)</span></li></ol><ul style:'font-size:110%; margin-top:0px;'><li>Omit the XML declaration.</li></ul><p style:'font-size:100%'><b>HTML5</b> is a mark up language used for structuring and presenting consent on the <a href='https://en.wikipedia.org/wiki/World_Wide_Web'>World Wide Web</a>. It was finalized, and published, on 28 October 3014 by the World Wide Web Consortium (W3C). This is the fifth revision of the <a href='https://en.wikipedia.org/wiki/HTML'>HTML</a> standard since the inception of the World Wide web.</p>",

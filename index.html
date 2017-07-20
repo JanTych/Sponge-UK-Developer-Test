@@ -27,7 +27,9 @@
 </div>
 <div class="grid-container">
   <section class="grid-50">
-    <!-- INSERT YOUR "ABOUT ME" SECTION HERE -->
+    
+    <nav id="about"></nav>
+
     <article id="content"></article>
     <noscript>
       <h1>You must enable JavaScript in order to view this page.</h1>
@@ -44,6 +46,14 @@
     </div>
   </footer>
 </div>
+
+<!-- About Handlebars template -->
+<script id="about-template" type="text/x-handlebars-template">
+  {{#each button}}
+    <button class="accordion">{{name}}</button>
+    <div class="panel">{{content}}</div>
+  {{/each}}
+</script>
 
 <!-- Header Handlebars template -->
 <script id="header-template" type="text/x-handlebars-template">
@@ -87,6 +97,24 @@
       </ul>
     {{/with}}
   {{/with}}
+</script>
+
+<!-- JavaScript for accordion -->
+<script>
+  var accordion = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < accordion.length; i++) {
+      accordion[i].onclick = function(){
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+              panel.style.display = "none";
+          } else {
+              panel.style.display = "block";
+          }
+      }
+  }
 </script>
 
 <!-- Documentation link Handlebars template -->

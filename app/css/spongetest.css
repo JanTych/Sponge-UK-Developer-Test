@@ -58,6 +58,32 @@ body {
     font-size: 1.8em;
   }
 
+
+  #about button.accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      font-size: 150%;
+      border: none;
+      outline: none;
+  }
+
+
+  #about button.accordion.active {
+      background-color: #ddd;
+  }
+
+  #about div.panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+  }
+
+
+
 #content {
   padding-top: 30px;
   padding-bottom: 30px;

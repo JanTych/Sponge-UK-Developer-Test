@@ -35,6 +35,17 @@ jQuery(
 			};
 
 			/**
+			 * Populate the accordion
+			 */
+			var populateAbout = function() {
+				var strAboutSource = $( '#about-template' ).html(),
+						resAboutTemplate = Handlebars.compile( strAboutSource ),
+						strAboutHTML = resAboutTemplate( resContent.getItem( 'about' ) );
+
+				$( '#about' ).html( strAboutHTML );
+			};
+
+			/**
 			 * Populate the tasks
 			 */
 			var populateTasks = function() {
@@ -92,6 +103,7 @@ jQuery(
 			resContent.onReady(
 					function() {
 						populateHeader();
+						populateAbout();
 						populateTasks();
 						populateContent();
 						populateDocumentation();
